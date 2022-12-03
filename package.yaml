@@ -1,0 +1,40 @@
+name:                aoc2022
+version:             0.1.0.0
+synopsis:            "Advent of Code 2022"
+#description:
+homepage:            https://github.com/h9h/aoc2022#readme
+license:             BSD3
+author:              Michael Heinke
+maintainer:          git@h9h.de
+copyright:           2022 Michael Heinke
+category:            Web
+extra-source-files:
+- README.md
+- CHANGELOG.md
+
+dependencies:
+  - base >= 4.7 && < 5
+  - split
+
+ghc-options:
+- -Wall
+- -Wcompat
+- -Widentities
+- -Wincomplete-record-updates
+- -Wincomplete-uni-patterns
+- -Wmissing-home-modules
+- -Wpartial-fields
+- -Wredundant-constraints
+
+executables:
+  aoc2022:
+    source-dirs:      
+      [
+        "src", 
+        "01", "02", "03", "04", "05",
+        "06", "07", "08", "09", "10",
+        "11", "12", "13", "14", "15",
+        "16", "17", "18", "19", "20",
+        "21", "22", "23", "24", "25"
+      ]
+    main:             Main.hs
