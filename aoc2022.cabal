@@ -6,13 +6,13 @@ cabal-version: 1.12
 
 name:           aoc2022
 version:        0.1.0.0
+synopsis:       Advent of Code 2022
 category:       Web
-homepage:       https://github.com/githubuser/aoc2022#readme
+homepage:       https://github.com/h9h/aoc2022#readme
 author:         Michael Heinke
 maintainer:     git@h9h.de
 copyright:      2022 Michael Heinke
 license:        BSD3
-license-file:   LICENSE
 build-type:     Simple
 extra-source-files:
     README.md
@@ -46,6 +46,7 @@ executable aoc2022
       Day23
       Day24
       Day25
+      Puzzle
       Paths_aoc2022
   hs-source-dirs:
       src
@@ -74,8 +75,13 @@ executable aoc2022
       23
       24
       25
+      puzzle
   ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints
   build-depends:
       base >=4.7 && <5
+    , matrix
+    , megaparsec >=9.2.1
     , split
+    , text
+    , vector
   default-language: Haskell2010
