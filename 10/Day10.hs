@@ -42,19 +42,19 @@ printScreen = intercalate "\n" . chunksOf 40
 {-
 Mit readInstruction Noop -> [0], AddX n -> [0, n] wäre es noch einfacher:
 
-  sum
-    . flip map [20, 60 .. 220]
-    . signalStrength
-    . scanl (+) 1
-    . concatMap readInstruction
-    . lines
+  sum                                     -- [Int]        -> Int
+    . flip map [20, 60 .. 220]            -- Int -> Int   -> [Int]
+    . signalStrength                      -- [Int]        -> Int -> Int
+    . scanl (+) 1                         -- [Int]        -> [Int]
+    . concatMap readInstruction           -- [String]     -> [Int] 
+    . lines                               -- String       -> [String]
 
 und
 
- unlines
-    . chunksOf 40
-    . zipWith pixel (cycle [0 .. 39])
-    . scanl (+) 1
-    . concatMap readInstruction
-    . lines
+ unlines                                  -- [[Char]]     -> [Char]
+    . chunksOf 40                         -- [Char]       -> [[Char]]
+    . zipWith pixel (cycle [0 .. 39])     -- [Int]        -> [Char]
+    . scanl (+) 1                         -- [Int]        -> [Int]
+    . concatMap readInstruction           -- [String]     -> [Int] 
+    . lines                               -- String       -> [String]
 -}
