@@ -38,3 +38,23 @@ drawScreen v = map pixel [0 :: Int .. 239]
 
 printScreen :: [Char] -> String
 printScreen = intercalate "\n" . chunksOf 40
+
+{-
+Mit readInstruction Noop -> [0], AddX n -> [0, n] wäre es noch einfacher:
+
+  sum
+    . flip map [20, 60 .. 220]
+    . signalStrength
+    . scanl (+) 1
+    . concatMap readInstruction
+    . lines
+
+und
+
+ unlines
+    . chunksOf 40
+    . zipWith pixel (cycle [0 .. 39])
+    . scanl (+) 1
+    . concatMap readInstruction
+    . lines
+-}
