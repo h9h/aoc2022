@@ -46,7 +46,6 @@ executable aoc2022
       Day23
       Day24
       Day25
-      Puzzle
       Paths_aoc2022
   hs-source-dirs:
       src
@@ -75,12 +74,13 @@ executable aoc2022
       23
       24
       25
-      puzzle
   ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints
   build-depends:
-      base >=4.7 && <5
+      attoparsec
+    , base >=4.7 && <5
+    , containers
     , matrix
-    , megaparsec >=9.2.1
+    , search-algorithms
     , split
     , text
     , vector
