@@ -16,11 +16,14 @@ dependencies:
   - base >= 4.7 && < 5
   - split
   - text
+  - megaparsec
   - attoparsec
   - containers
   - vector
   - matrix
   - search-algorithms
+  - lens
+  - range
 
 ghc-options:
 - -Wall

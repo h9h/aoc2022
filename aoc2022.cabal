@@ -16,7 +16,6 @@ license:        BSD3
 build-type:     Simple
 extra-source-files:
     README.md
-    CHANGELOG.md
 
 executable aoc2022
   main-is: Main.hs
@@ -79,7 +78,10 @@ executable aoc2022
       attoparsec
     , base >=4.7 && <5
     , containers
+    , lens
     , matrix
+    , megaparsec
+    , range
     , search-algorithms
     , split
     , text
